@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de Horas de Servicio</title>
+    <link rel="icon" href="zonaSur.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="banner">
+        <img src="banner.gif" alt="Banner Zonasur" />
+      </div>
+      <div class="logo-slider">
+        <img src="pdlc.png" alt="Logo 1" />
+        <img src="pfa.png" alt="Logo 2" />
+        <img src="gna.png" alt="Logo 3" />
+        <img src="psg.png" alt="Logo 4" class="yellow-logo" />
+        <img src="SAME.png" alt="Logo 5" />
+        <img src="mecanicos.png" alt="Logo 6" />
+      </div>
+
+      <h1>Registro de Horas de Servicio</h1>
+      <textarea
+        id="logInput"
+        placeholder="Busca los logs de entrada/salida y pagalos acá..."
+      ></textarea>
+      <button onclick="calcularTiempoServicio()">
+        Calcular Tiempo de Servicio
+      </button>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Steam ID</th>
+              <th>Tiempo en Servicio</th>
+            </tr>
+          </thead>
+          <tbody id="resultados"></tbody>
+        </table>
+      </div>
+      <br />
+    </div>
+    <footer class="footer">
+      <p><strong>Powered by 🐐 Dieglock</strong></p>
+      <a href="https://zonasurrp.com.ar/" target="_blank">zonasurrp.com.ar</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

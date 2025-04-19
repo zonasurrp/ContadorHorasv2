@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1f2937; 
+    color: #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    transform: scale(0.95);
+    transform-origin: top center;
+}
+
+.container {
+    position: relative;
+    flex: 1;
+    width: 90%;
+    max-width: 760px;
+    background-color: #111827;
+    padding: 1.9rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.banner {
+    width: 100%;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .banner img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+.container::before {
+    content: "";
+    position: absolute;
+    top: -47px;
+    left: 50%;
+    width: 190px;
+    height: 190px;
+    background: rgba(16, 185, 129, 0.4);
+    filter: blur(95px);
+    z-index: -1;
+    transform: translateX(-50%);
+}
+
+
+
+
+
+
+h1 {
+    display: inline-block;
+    font-size: 1.71rem;
+    margin-bottom: 1rem;
+    color: #10b981;
+    border-right: 3px solid #10b981;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(19, end), blink 0.6s infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+textarea {
+    width: 100%;
+    padding: 1.425rem;
+    border: none;
+    border-radius: 5px;
+    resize: vertical;
+    background-color: #374151;
+    color: #e5e7eb;
+    font-size: 0.95rem;
+    height: 190px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+textarea:focus {
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.7);
+    border: 1px solid #10b981;
+}
+
+button {
+    width: 100%;
+    padding: 0.71rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #10b981;
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #059669;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 190%;
+    height: 190%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease-out;
+}
+
+button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+
+.zonasur-logo {
+    height: 60px;
+    margin: 0 10px;
+}
+
+.zonasur-logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.logo-slider img {
+    height: 50px;
+    margin: 0 8px;
+    transition: transform 0.3s ease;
+}
+
+.logo-slider img:hover {
+    transform: scale(1.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: #1f2937;
+    border: 2px solid rgba(16, 185, 129, 0.6);
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+}
+
+th, td {
+    padding: 0.71rem;
+    text-align: left;
+    border-bottom: 1px solid #374151;
+    color: #e5e7eb;
+}
+
+th {
+    background-color: #107bb9;
+    color: #fff;
+    font-weight: bold;
+}
+
+td {
+    background-color: #1f2937;
+}
+
+tr:nth-child(even) td {
+    background-color: #2d3748;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+footer {
+    text-align: center;
+    margin-top: 1rem;
+    padding: 1rem 0;
+    background-color: #111827;
+    color: #9ca3af;
+    width: 100%;
+}
+
+footer a {
+    color: #10b981; /* verde suave tipo tailwind emerald-500 */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+footer a:hover {
+    color: #34d399; /* tono más claro al pasar el mouse */
+}
+
+
+.logo-slider {
+    display: flex;
+    justify-content: center;
+    gap: 19px;
+    margin-bottom: 19px;
+}
+
+.logo-slider img {
+    max-width: 76px;
+    max-height: 76px;
+    object-fit: contain;
+}
+
+.yellow-logo {
+    filter: sepia(1) saturate(40) hue-rotate(1deg);
+}
